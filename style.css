@@ -1,0 +1,379 @@
+body {
+    background-color: #000000; 
+}
+
+
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end; 
+    width: 100%;              
+    padding-right: 20px;        
+    gap: 15px;                
+}
+
+ 
+button {
+ outline: none;
+ cursor: pointer;
+ border: none;
+ padding: 0.10rem 1rem;
+ margin: 0;
+ font-family: inherit;
+ font-size: inherit;
+ position: relative;
+ display: inline-block;
+ letter-spacing: 0.01rem;
+ font-weight: 100;
+ font-size: 20px;
+ border-radius: 200px;
+ overflow: hidden;
+ background: #66ff66;
+ color: ghostwhite;
+}
+
+button span {
+ position: relative;
+ z-index: 10;
+ transition: color 0.4s;
+}
+
+button:hover span {
+ color: black;
+}
+
+button::before,
+button::after {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 40%;
+ height: 100%;
+ z-index: 0;
+}
+
+button::before {
+ content: "";
+ background: #000;
+ width: 120%;
+ left: -10%;
+ transform: skew(30deg);
+ transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+button:hover::before {
+ transform: translate3d(100%, 0, 0);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;         
+    padding: 10px 20px;  
+    background-color: #000;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block; 
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-left: auto; 
+}
+
+.hero-section h1,
+.hero-section h2 {
+    font-family: "googlesans", sans-serif;
+    font-weight:700; 
+}
+
+.hero-section p {
+    font-family: "Google Sans", sans-serif;
+    font-weight: 400; 
+    line-height: 1.6; 
+}
+
+/* تنسيق الحاوية الكبرى */
+.hero-section {
+    display: flex;          /* تفعيل خاصية الميزان */
+    justify-content: space-between; /* ترك مسافة بين النص والصورة */
+    align-items: center;    /* موازنتهم عمودياً */
+    padding: 50px 5%;      /* مسافة من حواف الصفحة */
+    min-height: 80vh;       /* لجعل القسم يأخذ أغلب مساحة الشاشة */
+}
+
+/* تنسيق جهة النصوص */
+.hero-content {
+    flex: 1;                /* تأخذ نصف المساحة */
+    max-width: 600px;
+}
+
+.welcome-text {
+    color: red;
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    color: red;
+    font-family: "Google Sans", sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: red;
+    font-family: "Google Sans", sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* تنسيق جهة الصورة */
+.hero-image {
+    flex: 1;                /* تأخذ النصف الثاني */
+    display: flex;
+    justify-content: flex-end; /* دفع الصورة لأقصى اليمين */
+}
+
+.hero-image img {
+    width: 400px;           /* يمكنك تصغير أو تكبير الرقم حسب رغبتك */
+    height: auto;
+    border-radius: 15px;    /* لجعل زوايا الصورة ناعمة */
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2); /* توهج أحمر خفيف خلف الصورة */
+}
+
+
+.hero-section, .about-page-two {
+    display: flex;
+    width: 100%;
+    min-height: 100vh; /* كل قسم يأخذ طول الشاشة كاملاً */
+    box-sizing: border-box;
+}
+
+.about-page-two {
+    background-color:black; /* لون خلفية مختلف قليلاً لتمييزه */
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 10%;
+}
+
+/* تطبيق خط Google Sans على الصفحة بالكامل */
+body {
+    font-family: 'Google Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* تنسيق القسم الثاني */
+.about-page-two {
+    background-color: #0f0f0f; /* خلفية سوداء فخمة */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    color: white;
+}
+
+.about-container {
+    width: 100%;
+}
+
+.section-title {
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* توزيع النص والإحصائيات بجانب بعضهما */
+.about-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.about-text {
+    flex: 1.5; /* النص يأخذ مساحة أكبر قليلاً */
+}
+
+.about-text p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #ccc; /* رمادي فاتح للنصوص لراحة العين */
+}
+
+/* حاوية الإحصائيات - هنا يمكنك دمج كودك التجميلي */
+.about-stats {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* تنسيق صندوق الإحصائية الفردي */
+.stat-box {
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid red; /* حركة جمالية باللون الأحمر */
+    transition: transform 0.3s ease; /* لإضافة حركة عند مرور الماوس */
+}
+
+.stat-box:hover {
+    transform: translateX(10px); /* يتحرك الصندوق لليمين قليلاً عند لمسه */
+}
+
+.stat-number {
+    display: block;
+    color: red;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: white;
+}
+
+.about-page-two {
+    background-color:black; 
+    width: 100%;
+    min-height: 100vh;      /* هذا السطر يخبر القسم بأن يأخذ طول الشاشة كاملاً */
+    
+    display: flex;          /* تفعيل نظام الميزان */
+    flex-direction: column; /* ترتيب العناصر (العنوان ثم المحتوى) عمودياً */
+    justify-content: center; /* <<< هذا هو السر! يضع كل شيء في المنتصف عمودياً */
+    
+    padding: 0 10%;         /* مسافة جانبية لكي لا يلمس الكلام أطراف الشاشة */
+    box-sizing: border-box; /* لضمان حساب المسافات بشكل صحيح */
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* هذا السطر ينقل العناصر لآخر السطر (اليمين) */
+  gap: 10px; /* لإضافة مسافة بسيطة بين الأزرار */
+}
+
+/* كلاس مشترك لكل الأقسام التي تريدها في منتصف الشاشة */
+.full-page-section {
+    min-height: 100vh;      /* يأخذ طول الشاشة كاملاً */
+    display: flex;          /* تفعيل الميزان */
+    flex-direction: column; /* ترتيب العناصر من الأعلى للأسفل */
+    justify-content: center; /* <<< هذا هو السر: توسيط عمودي */
+    padding: 0 10%;         /* مسافات جانبية */
+    box-sizing: border-box;
+}
+
+/* تلوين قسم الـ About */
+.about-page-two {
+    background-color: black;
+}
+
+/* تلوين قسم الـ Services بلون مختلف قليلاً لتمييزه */
+.services-section {
+    background-color: black; 
+    border-top: 2px solid black; /* خط بسيط للفصل بين الأقسام */
+}
+
+/* تلوين النص داخل صناديق الإحصائيات والخدمات */
+/* هذا الكود سيطبق اللون الأبيض على الصناديق الموجودة داخل قسم Services فقط */
+.services-section .stat-box {
+    color: white !important; /* لضمان غلبه على أي لون أحمر سابق */
+}
+
+/* لضمان أن النصوص داخل الصناديق في السيرفس بيضاء أيضاً */
+.services-section .stat-box span, 
+.services-section .stat-box p {
+    color: white !important;
+}
+
+/* أما هذا الكود فيبقى كما هو لقسم الـ About ليكون أحمر */
+.about-page-two .stat-box {
+    color: red;
+}
+
+/* تلوين قسم التواصل */
+.contact-section {
+    background-color: black;
+    scroll-margin-top: 80px;
+}
+
+/* تنسيق قائمة المعلومات */
+.contact-info-list {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+/* لجعل صناديق التواصل في هذا القسم تتفاعل عند اللمس */
+.contact-section .stat-box {
+    cursor: pointer;
+    text-align: center;
+    border-left: 5px solid red;
+    color: red; /* هنا رجعنا للون الأحمر كما طلبت في الأقسام السابقة */
+    transition: 0.3s;
+}
+
+.contact-section .stat-box:hover {
+    background: red;
+    color: white; /* يتغير اللون عند وضع الماوس ليعطي شعور التفاعل */
+}
+
+.stat-box {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.stat-box:hover {
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.5); /* توهج قوي عند لمس الماوس */
+    border-color: #ff3333;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-text, .about-stats {
+    animation: fadeInUp 1s ease-out;
+}
+
+.full-page-section {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 50px 50px; /* حجم مربعات الشبكة */
+}
+
+.main-header {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px); /* يغبش المحتوى خلف الهيدر */
+    border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
